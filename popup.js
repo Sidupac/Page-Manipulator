@@ -1,7 +1,7 @@
 window.onload = function statup()
 {
     // Enable to clear the storage.
-    //chrome.storage.sync.clear();
+    //chrome.storage.local.clear();
     main()
     
 }
@@ -246,7 +246,7 @@ class Editor
     {
         let filename = this.active_file;
         this.close_file(filename);
-        chrome.storage.sync.remove(filename,function(){});
+        chrome.storage.local.remove(filename,function(){});
         show_message("Deleted "+filename);
     }
     save_file_by_name(filename)
@@ -275,7 +275,7 @@ class Editor
 
         all_new_data[filename] = current_file_data;
 
-        chrome.storage.sync.set(all_new_data, function() {
+        chrome.storage.local.set(all_new_data, function() {
             show_message("Saved!");
         });
     }
@@ -307,7 +307,7 @@ class Editor
 
         all_new_data[current_file_name] = current_file_data;
 
-        chrome.storage.sync.set(all_new_data, function() {
+        chrome.storage.local.set(all_new_data, function() {
             show_message("Saved!");
         });
 
@@ -597,7 +597,7 @@ class Navigation
     // gets the saved files from the storage.
     get_saved_nav_items()
     {
-        chrome.storage.sync.get(null, function(data) {
+        chrome.storage.local.get(null, function(data) {
 
             //clear the array.
             this.nav_items = [];

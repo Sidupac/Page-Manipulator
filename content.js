@@ -14,7 +14,7 @@ window.onload = function statup()
 
 function load()
 {
-    chrome.storage.sync.get(null, function(data) {
+    chrome.storage.local.get(null, function(data) {
         //populate the array.
         let url = location.href;
         console.log(url);

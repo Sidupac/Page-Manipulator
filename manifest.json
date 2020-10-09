@@ -33,6 +33,7 @@
     "permissions": [
         "tabs",
         "storage",
+		"unlimitedStorage",
         "activeTab",
         "contextMenus"
     ]
