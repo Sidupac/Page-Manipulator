@@ -1,5 +1,10 @@
 # Page Manipulator.
 
+Sidupac Edits:
+Enable saving longer scripts
+
+
+
 Project status: not finished
 
 WARNING: This project was created in a short period of time and definitely isn't perfect (yet :D)!
